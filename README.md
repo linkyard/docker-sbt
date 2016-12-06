@@ -1,5 +1,7 @@
 SBT in a Docker Container
 =========================
+Docker images that packages Java and [sbt](http://www.scala-sbt.org/). To be used
+for builds.
 
 Usage: `docker run linkyard/sbt`
 
