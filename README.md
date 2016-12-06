@@ -14,3 +14,4 @@ Details
 -------
 * Uses the OpenJDK image as its base
 * sbt is preinitialized, so running it for the first time will not take forever
+* the compiler interfaces are already built, so the compilation will be reasonably fast

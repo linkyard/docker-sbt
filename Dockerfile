@@ -13,4 +13,12 @@ ENV PATH ${PATH}:${SBT_HOME}/bin
 # Run it to initialize the dependencies
 RUN sbt
 
+COPY init_scala-2.12 /tmp/init_scala-2.12
+RUN cd /tmp/init_scala-2.12 && \
+    sbt compile && \
+    rm -rf /tmp/init_scala-2.12
+
+VOLUME /app
+WORKDIR /app
+
 CMD ["sbt"]
