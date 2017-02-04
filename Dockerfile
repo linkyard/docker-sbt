@@ -17,7 +17,13 @@ ENV PATH ${PATH}:${SBT_HOME}/bin
 RUN sbt
 
 # This will build the compiler interface (which is really slow)
+# - for Scala 2.12
 COPY init_scala-2.12 /tmp/init
+RUN cd /tmp/init && \
+    sbt test && \
+    rm -rf /tmp/init
+# - for Scala 2.11
+COPY init_scala-2.11 /tmp/init
 RUN cd /tmp/init && \
     sbt test && \
     rm -rf /tmp/init
