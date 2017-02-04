@@ -3,12 +3,13 @@ SBT in a Docker Container
 Docker images that packages Java and [sbt](http://www.scala-sbt.org/). To be used
 for builds.
 
-Usage: `docker run linkyard/sbt`
+Usage: `docker run linkyard/docker-sbt`
 
 Versions
 --------
 * SBT: 0.13.13
 * Java: JDK 8
+* Scala (preinitialized): 2.12.1 and 2.11.8
 
 Details
 -------
