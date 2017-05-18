@@ -6,9 +6,8 @@ ENV SBT_VERSION 0.13.15
 COPY enable-letsencrypt.sh /usr/local/enable-letsencrypt.sh
 RUN /usr/local/enable-letsencrypt.sh $JAVA_HOME
 
-RUN curl -sL "https://dl.bintray.com/sbt/native-packages/sbt/${SBT_VERSION}/sbt-${SBT_VERSION}.tgz" | \
-    tar -xz -C /usr/local && \
-    mv /usr/local/sbt-launcher-packaging-${SBT_VERSION} /usr/local/sbt
+RUN curl -sL "https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz" | \
+    tar -xz -C /usr/local
 
 ENV SBT_HOME /usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
