@@ -7,9 +7,9 @@ Usage: `docker run linkyard/docker-sbt`
 
 Versions
 --------
-* SBT: 0.13.13
+* SBT: 0.13.16
 * Java: JDK 8
-* Scala (preinitialized): 2.12.1 and 2.11.8
+* Scala (preinitialized): 2.12.2 and 2.11.11
 
 Details
 -------
