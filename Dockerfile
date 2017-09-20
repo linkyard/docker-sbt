@@ -1,7 +1,7 @@
 FROM openjdk:8u131
 MAINTAINER Mario Siegenthaler <mario.siegenthaler@linkyard.ch>
 
-ENV SBT_VERSION 0.13.15
+ENV SBT_VERSION 0.13.16
 
 COPY enable-letsencrypt.sh /usr/local/enable-letsencrypt.sh
 RUN /usr/local/enable-letsencrypt.sh $JAVA_HOME
