@@ -6,7 +6,7 @@ ENV SBT_VERSION 0.13.16
 COPY enable-letsencrypt.sh /usr/local/enable-letsencrypt.sh
 RUN /usr/local/enable-letsencrypt.sh $JAVA_HOME
 
-RUN curl -sL "https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz" | \
+RUN curl -sL "https://cocl.us/sbt-${SBT_VERSION}.tgz" | \
     tar -xz -C /usr/local
 
 ENV SBT_HOME /usr/local/sbt
