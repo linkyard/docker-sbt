@@ -1,4 +1,4 @@
-FROM openjdk:8u131
+FROM openjdk:8u141
 MAINTAINER Mario Siegenthaler <mario.siegenthaler@linkyard.ch>
 
 ENV SBT_VERSION 0.13.16
