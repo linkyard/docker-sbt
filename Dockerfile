@@ -9,6 +9,9 @@ RUN /usr/local/enable-letsencrypt.sh $JAVA_HOME
 RUN curl -sL "https://cocl.us/sbt-${SBT_VERSION}.tgz" | \
     tar -xz -C /usr/local
 
+RUN useradd --create-home -s /bin/bash scala
+USER scala
+
 ENV SBT_HOME /usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
 
