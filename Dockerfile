@@ -24,11 +24,6 @@ COPY init_scala-2.12 /tmp/init
 RUN cd /tmp/init && \
     sbt test && \
     rm -rf /tmp/init
-# - for Scala 2.11
-COPY init_scala-2.11 /tmp/init
-RUN cd /tmp/init && \
-    sbt test && \
-    rm -rf /tmp/init
 
 #Run sbt once to initialize it along with commonly used dependencies
 # = We trade a bigger image size against faster builds

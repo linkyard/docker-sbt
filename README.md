@@ -9,7 +9,7 @@ Versions
 --------
 * SBT: 0.13.16
 * Java: JDK 8
-* Scala (preinitialized): 2.12.2 and 2.11.11
+* Scala (preinitialized): 2.12.3
 
 Details
 -------
