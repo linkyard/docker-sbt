@@ -1,9 +1,10 @@
-FROM openjdk:8u151
+FROM openjdk:12
 LABEL maintainer="mario.siegenthaler@linkyard.ch"
 
-ENV SBT_VERSION 1.1.0
+ENV SBT_VERSION 1.3.0-RC2
 
-RUN curl -sL https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz | \
+# Use 1.2.8 because there is no binary release for RC's
+RUN curl -sL https://github.com/sbt/sbt/releases/download/v1.2.8/sbt-1.2.8.tgz | \
     tar -xz -C /usr/local
 
 RUN useradd --create-home -s /bin/bash scala
