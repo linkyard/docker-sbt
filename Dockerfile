@@ -1,15 +1,17 @@
-FROM openjdk:13
+FROM openjdk:11-jdk
 LABEL maintainer="mario.siegenthaler@linkyard.ch"
 
-ENV SBT_VERSION 1.3.8
+ENV SBT_VERSION 1.5.5
 
 
 # add deps
 # - libatomic: needed by protoc
 # - git: needed by sbt when we use source dependency
-RUN yum install -y -q libatomic git
+RUN apt-get update && \
+    apt-get install -y libatomic1 git && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL https://github.com/sbt/sbt/releases/download/v1.3.8/sbt-1.3.8.tgz | \
+RUN curl -sL https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz | \
     tar -xz -C /usr/local
 
 RUN useradd --create-home -s /bin/bash scala
