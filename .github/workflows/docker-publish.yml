@@ -48,7 +48,7 @@ jobs:
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
       - name: Log into registry
-        run: echo "${{ secrets.CR_PAT }}" | docker login docker.pkg.github.com -u ${{ github.CR_USER }} --password-stdin
+        run: docker login docker.pkg.github.com -u ${{ github.CR_USER }} -p "${{ secrets.CR_PAT }}"
 
       - name: Push image
         run: |
