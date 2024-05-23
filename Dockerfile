@@ -1,7 +1,7 @@
-FROM openjdk:11-jdk
+FROM openjdk:17-buster
 LABEL maintainer="mario.siegenthaler@linkyard.ch"
 
-ENV SBT_VERSION 1.5.5
+ENV SBT_VERSION 1.10.0
 
 
 # add deps
